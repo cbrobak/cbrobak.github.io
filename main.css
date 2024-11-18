@@ -3,17 +3,18 @@
 
 body {
   height: 100vh;
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   font-family: "Lato", sans-serif;
   color: #333;
-  background-color: #f5f5f5; /* Soft off-white background */
+  background-color: #f5f5f5;
+  border: 5px solid gold;
+  padding: 10px;
+  margin: 0;
+  background-color: #f8f8f8;
 }
 
 h1,
@@ -28,8 +29,26 @@ h3 {
   color: #1a237e; /* Rich navy blue for tagline */
 }
 
+#affirmationContainer {
+  border: 3px solid gold;
+  padding: 20px;
+  min-height: fit-content; /* Ensures a minimum height */
+  max-width: fit-content; /* Optional: limits the width of the box */
+  margin: 20px auto; /* Centers the box and adds space around it */
+  text-align: center;
+  background-color: white; /* Makes the affirmation stand out */
+  font-size: 1.5em; /* Adjust based on your design needs */
+  color: #6a1b9a; /* Deep purple for the text */
+  border-radius: 8px; /* Rounded corners for the box */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional: gives a soft shadow effect */
+}
+
+#affirmationContainer.visible {
+  display: flex;
+}
+
 button {
-  background-color: #ffd700; /* Gold button */
+  background-color: rgb(255, 215, 0); /* Gold button */
   color: #1a237e; /* Navy text on gold button */
   padding: 10px 20px;
   border: none;
