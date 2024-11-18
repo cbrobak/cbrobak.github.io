@@ -14,14 +14,21 @@ function getAffirmations() {
     .then((data) => {
       const affirmationText = JSON.parse(data.contents).affirmation;
       if (affirmationText && affirmationText.trim() !== "") {
-        affirmation.textContent = affirmationText; // Update the affirmation text
-        affirmationContainer.style.display = "flex"; // Show the container
+        affirmation.textContent = affirmationText;
+        affirmationContainer.style.display = "flex";
       } else {
-        affirmationContainer.style.display = "none"; // Hide container if no valid text
+        showError("Error fetching affirmations, please try again later.");
       }
     })
     .catch((error) => {
       console.error("Error fetching affirmation:", error);
+      showError("Unable to fetch an affirmation. Please try again later.");
     });
   affirmation.innerHTML = "" ? affirmation.classList.add("visible") : null;
+}
+
+function showError(message) {
+  affirmationContainer.classList.remove("affirmationContainer");
+  affirmationContainer.classList.add("error");
+  affirmationContainer.textContent = message;
 }

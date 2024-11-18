@@ -20,27 +20,27 @@ body {
 h1,
 p {
   font-family: "Playfair Display", serif;
-  color: #4b0082; /* Deep purple for H1 */
+  color: #4b0082;
 }
 
 h2,
 h3 {
   font-family: "Playfair Display", serif;
-  color: #1a237e; /* Rich navy blue for tagline */
+  color: #1a237e;
 }
 
-#affirmationContainer {
+.affirmationContainer {
   border: 3px solid gold;
   padding: 20px;
-  min-height: fit-content; /* Ensures a minimum height */
-  max-width: fit-content; /* Optional: limits the width of the box */
-  margin: 20px auto; /* Centers the box and adds space around it */
+  min-height: fit-content;
+  max-width: fit-content;
+  margin: 20px auto;
   text-align: center;
-  background-color: white; /* Makes the affirmation stand out */
-  font-size: 1.5em; /* Adjust based on your design needs */
-  color: #6a1b9a; /* Deep purple for the text */
-  border-radius: 8px; /* Rounded corners for the box */
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional: gives a soft shadow effect */
+  background-color: white;
+  font-size: 1.5em;
+  color: #6a1b9a;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 #affirmationContainer.visible {
@@ -48,11 +48,21 @@ h3 {
 }
 
 button {
-  background-color: rgb(255, 215, 0); /* Gold button */
-  color: #1a237e; /* Navy text on gold button */
+  background-color: rgb(255, 215, 0);
+  color: #1a237e;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
   font-weight: bold;
   cursor: pointer;
+}
+
+.error {
+  border: solid 2.5px red;
+  background-color: black;
+  color: red;
+  height: 50px;
+  line-height: 50px;
+  margin: 25px;
+  padding: 10px;
 }
