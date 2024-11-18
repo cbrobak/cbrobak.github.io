@@ -1,11 +1,6 @@
 const affirmationContainer = document.getElementById("affirmationContainer");
 const affirmation = document.getElementById("affirmation");
-
-affirmation.innerText = " "
-  ? (affirmationContainer.style.display = "none")
-  : (affirmationContainer.style.display = "inline-block");
-// ? (affirmationContainer.style.display = "none")
-// : (affirmationContainer.style.display = "block");
+affirmationContainer.style.display = "none";
 
 function getAffirmations() {
   const url =
@@ -18,9 +13,15 @@ function getAffirmations() {
     .then((response) => response.json())
     .then((data) => {
       const affirmationText = JSON.parse(data.contents).affirmation;
-      affirmation.textContent = affirmationText; // Update the affirmation text
+      if (affirmationText && affirmationText.trim() !== "") {
+        affirmation.textContent = affirmationText; // Update the affirmation text
+        affirmationContainer.style.display = "flex"; // Show the container
+      } else {
+        affirmationContainer.style.display = "none"; // Hide container if no valid text
+      }
     })
     .catch((error) => {
       console.error("Error fetching affirmation:", error);
     });
+  affirmation.innerHTML = "" ? affirmation.classList.add("visible") : null;
 }

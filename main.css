@@ -43,6 +43,10 @@ h3 {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Optional: gives a soft shadow effect */
 }
 
+#affirmationContainer.visible {
+  display: flex;
+}
+
 button {
   background-color: rgb(255, 215, 0); /* Gold button */
   color: #1a237e; /* Navy text on gold button */
