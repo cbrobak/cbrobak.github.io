@@ -65,7 +65,7 @@ div.error {
   padding: 10px;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 430px) {
   h2 {
     font-size: 1.2em;
     line-height: 1.4;
