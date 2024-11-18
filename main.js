@@ -16,19 +16,16 @@ function getAffirmations() {
       if (affirmationText && affirmationText.trim() !== "") {
         affirmation.textContent = affirmationText;
         affirmationContainer.style.display = "flex";
-      } else {
-        showError("Error fetching affirmations, please try again later.");
+        affirmation.classList.remove("error");
       }
     })
     .catch((error) => {
       console.error("Error fetching affirmation:", error);
-      showError("Unable to fetch an affirmation. Please try again later.");
+      showError("Error fetching affirmations, please try again later.");
     });
-  affirmation.innerHTML = "" ? affirmation.classList.add("visible") : null;
 }
 
 function showError(message) {
-  affirmationContainer.classList.remove("affirmationContainer");
   affirmationContainer.classList.add("error");
   affirmationContainer.textContent = message;
 }
