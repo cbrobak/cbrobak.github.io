@@ -1,5 +1,5 @@
 # cbrobak.github.io
 
-A site that will display a random affirmation or let users select from a category.
+A site that will display a random affirmation on load. It was intended to include a dropdown menu to select a category and then fetch a random affirmation according to the selected category from a seperate api, however due to the amount of overtime I have had to work recently, combined with the responsibilities of my home and family I was unable to get that feature completed. It will be added later, but not in time for the submission deadline. It is my hope that this simple website will suffice to showcase my coding abilities. If you have any questions, or would like more information, please feel free to contact me using the information listed on my home page [here](https://github.com/cbrobak)
 
-Parts of this site were created with the help of chatGPT, althougth the ideas, functionality, and layout are my own, after researching considerably, I was in dire need of help.
+Parts of this site were created with the help of chatGPT, specifically the first part of the url, which solved an issue with CORS policy, also adding the date and time to the end of the url to make sure a new affirmation was retrieved on load (or refresh), and the colors and fonts to match a royalty theme. However, the ideas, functionality, and layout are my own. I do hope you have enjoyed my site, and stay tuned for updates in the very near future.
